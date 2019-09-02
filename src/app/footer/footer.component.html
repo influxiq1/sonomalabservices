@@ -1,0 +1,102 @@
+<div class="container-fluid home_banner_block6 Contentinfo contactuspage">
+    <div class="row is-table-row">
+        <div class="home_banner_block6_img">
+            <div class="contentinfo_leftimgwrapper">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img width="755" height="532" src="assets/images/contentinfo_imgleft.png"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contactmainwrapper1">
+            <div class="col-md-8 col-sm-12 home_banner_block6_info">
+                <div class="row is-table-row">
+                    <div class="col-md-8 col-sm-12 home_banner_block6_infoleft">
+                        <h3>Contact Us</h3>
+                        <p>Please use this form to contact our office. Someone will get back to you within 24 hours.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 home_banner_block6_inforight">
+                        <h5>GET IN TOUCH</h5>
+                        <p>Sonoma Health Services
+                            <br> 512 Commerce Drive Suite #D Panama City Beach 32408
+                            <br> Phone: <a href="tel:850-708-2846">850-708-2846</a></p>
+                    </div>
+                </div>
+                <div class="row homecontactusblock">
+                    <div class="col-md-12 col-sm-12 contatuswrapper">
+                            <form class="wpcf7-form" [formGroup]="footerContactUsForm" (submit)="footerContactUsFormSubmit()">
+                                    <div class="homecontactformblock">
+                                        <label>
+                                            <input type="text" name="your-name" value="" size="40" class="form-control" placeholder="Name" [formControl]="footerContactUsForm.controls['name']" (blur)="inputUntouch(footerContactUsForm,'name')">
+                                            <span  *ngIf="!footerContactUsForm.controls['name'].valid && footerContactUsForm.controls['name'].touched" class="errortext">Full Name is required</span>
+                                        </label>
+                                        <label>
+                                            <input type="text" name="your-phone" value="" size="40" class="form-control" placeholder="Phone" [formControl]="footerContactUsForm.controls['phone']" (blur)="inputUntouch(footerContactUsForm,'phone')">
+                                            <span  *ngIf="!footerContactUsForm.controls['phone'].valid && footerContactUsForm.controls['phone'].touched" class="errortext">Phone Number is required</span>
+                                        </label>
+                                        <label>
+                                            <input type="email" name="your-email" value="" size="40" class="form-control" placeholder="Email" [formControl]="footerContactUsForm.controls['email']" (blur)="inputUntouch(footerContactUsForm,'email')">
+                                            <span  *ngIf="!footerContactUsForm.controls['email'].valid && footerContactUsForm.controls['email'].touched" class="errortext">Email is required</span>
+                                        </label>
+                                        <label class="msgblock">
+                                            <textarea name="your-message" cols="40" rows="10" class="form-control" placeholder="Message" [formControl]="footerContactUsForm.controls['message']" (blur)="inputUntouch(footerContactUsForm,'message')">
+                                                </textarea>
+                                                <span  *ngIf="!footerContactUsForm.controls['message'].valid && footerContactUsForm.controls['message'].touched" class="errortext">Message is required</span>
+                                        </label>
+                                        <div class="submitbtnwrapper">
+                                            <input type="submit"  class="btngreen btnsubmit">
+                                        </div>
+                                    </div>
+                                </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footerblock">
+
+    <span class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+                <a (click)="scrollToTop()">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+
+    <div class="container mainwrapper1">
+        <div class="footermenu">
+            <ul>
+                <li class="ssd lidiv0 active">
+                    <a [routerLink]="['/home']"> Home </a>
+                </li>
+                <li class="ssd lidiv1">
+                    <a [routerLink]="['/services']"> Services </a>
+                </li>
+                <li class="ssd lidiv2 ">
+                    <a [routerLink]="['/labs']"> Labs </a>
+                </li>
+                <li class="ssd lidiv3 ">
+                    <a [routerLink]="['/offered-labs']"> offered labs </a>
+                </li>
+                <li class="ssd lidiv4 ">
+                    <a [routerLink]="['/contact-us']"> Contact Us </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footertop">
+            <div class="socialmediaicons socialmediaicons2">
+                <a href="javascript:void(0)" class="fa fa-facebook"></a>
+                <a href="javascript:void(0)" class="fa fa-twitter"></a>
+                <a href="javascript:void(0)" class="fa fa-google"></a>
+                <a href="javascript:void(0)" class="fa fa-pinterest"></a>
+                <a href="javascript:void(0)" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="footercopyright">
+            Copyright 2018 | All Right Reserved by Sonoma Health Services
+        </div>
+    </div>
+</div>

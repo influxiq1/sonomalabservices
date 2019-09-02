@@ -1,0 +1,58 @@
+<div class="container-fluid topheaderblock">
+    <div class="mainwrapper">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 topheaderblocklogo">
+                <div class="toplogo">
+                    <a href="/home"> <img src="assets/images/newlogo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 topheaderblockinfo">
+                <div class="topheaderblockright">
+                    <div class="container-fluid topmenublock">
+                        <div class="container-fluid topmenu">
+                            <nav class="navbar navbar-default">
+
+                                <div class="navbar-header">
+
+                                    <span class="responsivemenu">MENU</span>
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeInDown">
+                                    <ul class="nav navbar-nav">
+                                        <li class="ssd lidiv0 " [ngClass]="{'active': url == 'home'||  url == ''}">
+                                            <a [routerLink]="['/home']"> Home </a>
+                                        </li>
+                                        <li class="ssd lidiv1 " [ngClass]="{'active': url == 'services'}">
+                                            <a [routerLink]="['/services']"> Services </a>
+                                        </li>
+                                        <li class="ssd lidiv2 " [ngClass]="{'active': url == 'labs'}">
+                                            <a [routerLink]="['/labs']"> Labs </a>
+                                        </li>
+                                        <li class="ssd lidiv3 " [ngClass]="{'active': url == 'offered-labs'}">
+                                            <a [routerLink]="['/offered-labs']"> offered labs </a>
+                                        </li>
+                                        <li class="ssd lidiv4 " [ngClass]="{'active': url == 'contact-us'}">
+                                            <a [routerLink]="['/contact-us']"> Contact Us </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="border1"></div>

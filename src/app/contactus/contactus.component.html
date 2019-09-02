@@ -1,3 +1,99 @@
-<p>
-  contactus works!
-</p>
+<div class="appcontactus">
+
+    <app-header></app-header>
+
+    <div class="container-fluid home_banner_block inner_banner_block">
+        <div class="home_banner_block_body">
+            <div class="bannermainbox2">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><img width="1920" height="717" src="assets/images/contact_banner.jpg"></li>
+                </ul>
+            </div>
+            <div class="home_banner_block_wrapper">
+                <h2>national sales and  marketing organization</h2>
+                <h3>With over 20 years of experience</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid home_banner_block6 Contentinfo Contentpageformblock">
+        <div class="row is-table-row">
+            <div class="home_banner_block6_img">
+                <div class="contentinfo_leftimgwrapper">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><img src="assets/images/contactuspage_leftimage.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contactmainwrapper1">
+                <div class="col-md-8 col-sm-12 home_banner_block6_info">
+                    <div class="row is-table-row">
+                        <div class="col-md-7 col-sm-12 home_banner_block6_infoleft">
+                            <h3>Contact Us</h3>
+                            <p>Please use this form to contact our office. Someone will get back to you within 24 hours.</p>
+                        </div>
+                        <div class="col-md-5 col-sm-12 home_banner_block6_inforight">
+                            <h5>GET IN TOUCH</h5>
+                            <p>Sonoma Health Services
+                                <br> 512 Commerce Drive Suite #D Panama City Beach 32408
+                                <br> Phone: <a href="tel:850-708-2846">850-708-2846</a></p>
+                        </div>
+                    </div>
+                    <div class="row homecontactusblock">
+                        <div class="col-md-12 col-sm-12 contatuswrapper">
+                            <form [formGroup]="contactusForm" (ngSubmit)="contactusFormSubmit()">
+                                <div class="homecontactformblock contactuspageformblock">
+                                    <label>
+                                        <input type="text" name="your-name" value="" size="40" class="form-control" placeholder="Name" [formControl]="contactusForm.controls['name']" (blur)="inputUntouch(contactusForm,'name')">
+                                        <span  *ngIf="!contactusForm.controls['name'].valid && contactusForm.controls['name'].touched" class="errortext">Full Name is required</span>
+                                    </label>
+                                    <label>
+                                        <input type="text" name="your-phone" value="" size="40" class="form-control" placeholder="Phone" [formControl]="contactusForm.controls['phone']" (blur)="inputUntouch(contactusForm,'phone')">
+                                        <span  *ngIf="!contactusForm.controls['phone'].valid && contactusForm.controls['phone'].touched" class="errortext">Phone is required</span>
+                                    </label>
+                                    <label>
+                                        <input type="email" name="your-email" value="" size="40" class="form-control" placeholder="Email" [formControl]="contactusForm.controls['email']" (blur)="inputUntouch(contactusForm,'email')">
+                                        <span  *ngIf="!contactusForm.controls['email'].valid && contactusForm.controls['email'].touched" class="errortext">Email is required</span>
+                                    </label>
+                                    <label>
+                                        <select name="selectstate" class="form-control" placeholder="Select State" id="State" aria-required="true" aria-invalid="false" [formControl]="contactusForm.controls['state']">
+                                            <option value="">Select State</option>
+                                            <option  *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</option>
+                                           </select>
+                                    </label>
+                                    <label>
+                                        <input type="text" name="your-city" value="" size="40" class="form-control" placeholder="City*" [formControl]="contactusForm.controls['city']" (blur)="inputUntouch(contactusForm,'city')">
+                                        <span  *ngIf="!contactusForm.controls['city'].valid && contactusForm.controls['city'].touched" class="errortext">City is required</span>
+                                    </label>
+                                    <label>
+                                        <input type="text" name="your-zip" value="" size="40" class="form-control" placeholder="Zip Code*" [formControl]="contactusForm.controls['zip']" (blur)="inputUntouch(contactusForm,'zip')">
+                                        <span  *ngIf="!contactusForm.controls['zip'].valid && contactusForm.controls['zip'].touched" class="errortext">Zip is required</span>
+                                    </label>
+                                    <label class="msgblock">
+                                        <input type="text" name="your-streetaddress" value="" size="40" class="form-control" placeholder="Street Address*" [formControl]="contactusForm.controls['address']" (blur)="inputUntouch(contactusForm,'address')">
+                                        <span  *ngIf="!contactusForm.controls['address'].valid && contactusForm.controls['address'].touched" class="errortext">Address is required</span>
+                                    </label>
+                                    <label class="msgblock">
+                                        <textarea name="your-message" cols="40" rows="10" class="form-control" placeholder="Message" [formControl]="contactusForm.controls['message']" (blur)="inputUntouch(contactusForm,'message')"></textarea>
+                                                <span  *ngIf="!contactusForm.controls['message'].valid && contactusForm.controls['message'].touched" class="errortext">Message is required</span>
+                                    </label>
+                                    <div class="submitbtnwrapper">
+                                        <input type="submit" class="btngreen btnsubmit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>
+
+
+
+
+
+
